@@ -28,20 +28,34 @@ class OrangeHRM_EmployeeSearch_TListeners {
 	 * @param testCaseContext related information of the executed test case.
 	 */
 	@BeforeTestCase
-	def sampleBeforeTestCase(TestCaseContext testCaseContext) {
-		println testCaseContext.getTestCaseId()
-		println testCaseContext.getTestCaseVariables()
-	}
+	// def sampleBeforeTestCase(TestCaseContext testCaseContext) {
+		// println testCaseContext.getTestCaseId()
+		// println testCaseContext.getTestCaseVariables()
+	// }
+	
+		def sampleBeforeTestCase() {
+			WebUI.openBrowser('')
+		
+			WebUI.navigateToUrl('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+		
+			WebUI.maximizeWindow()
+		}
 
 	/**
 	 * Executes after every test case ends.
 	 * @param testCaseContext related information of the executed test case.
 	 */
 	@AfterTestCase
-	def sampleAfterTestCase(TestCaseContext testCaseContext) {
-		println testCaseContext.getTestCaseId()
-		println testCaseContext.getTestCaseStatus()
-	}
+	// def sampleAfterTestCase(TestCaseContext testCaseContext) {
+		// println testCaseContext.getTestCaseId()
+		// println testCaseContext.getTestCaseStatus()
+	// }
+	
+		def sampleAfterTestCase() {
+			WebUI.closeBrowser()
+		}
+	
+		
 
 	/**
 	 * Executes before every test suite starts.
